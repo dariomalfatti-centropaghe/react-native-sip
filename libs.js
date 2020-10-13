@@ -13,7 +13,7 @@ async function main() {
     const fs = require('fs-extra');
 
     console.log("Copy iOS stuff");
-    fs.copySync(__dirname + '/react-native-pjsip-builder-2.8.0/dist/ios/VialerPJSIP.framework',  __dirname + '/ios/', { overwrite: true });
+    fs.copySync(__dirname + '/react-native-pjsip-builder-2.8.0/dist/ios/VialerPJSIP.framework',  __dirname + '/ios/VialerPJSIP.framework/', { overwrite: true });
 
     console.log("Copy Android stuff");
     fs.copySync(__dirname + '/react-native-pjsip-builder-2.8.0/dist/android/src/', __dirname + '/android/src/', { overwrite: true });
