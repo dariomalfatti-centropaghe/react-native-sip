@@ -124,6 +124,8 @@ RUN mkdir -p /output/openssl/ && \
     mkdir -p /output/pjsip && \
     mkdir -p /output/opus
 
+RUN pwd
+
 # Build opus
 ADD ./build_opus.sh /usr/local/sbin/
 RUN IFS=" " && \
