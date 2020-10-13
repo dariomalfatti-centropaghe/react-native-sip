@@ -10,8 +10,14 @@ if (Test-Path "./dist/android") {
     Remove-Item -Force -Recurse "./dist/android"
 }
 
-docker build -t react-native-pjsip-builder/android ./android/;
+mkdir -Path ./android/;
+
+Set-Location -Path $scriptDir/android
+
+docker build -t react-native-pjsip-builder/android ./;
 docker run --name ${CONTAINER_NAME} ${IMAGE_NAME} bin/true
+
+Set-Location -Path ..
 
 docker cp ${CONTAINER_NAME}:/dist/android ./dist/android
 
