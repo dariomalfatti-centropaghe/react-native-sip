@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "postinstall": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./libs.ps1",
+    "postinstall": "node ./libs.js",
     "lint": "eslint ./src",
     "generate-docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
   },
@@ -12,7 +12,8 @@
     "url": "https://github.com/florindumitru/react-native-sip/issues"
   },
   "dependencies": {
-    "events": "1.1.0"
+    "events": "1.1.0",
+    "fs-extra": "^9.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.0",
