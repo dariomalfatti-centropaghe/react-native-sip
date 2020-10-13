@@ -1,3 +1,4 @@
+**ATTENTION**: Fork of react-native-sip with support Windows. Bash scripts are replaced with Powershell scripts.
 
 
 # react-native-sip
