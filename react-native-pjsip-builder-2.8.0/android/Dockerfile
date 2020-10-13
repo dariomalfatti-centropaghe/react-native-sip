@@ -40,6 +40,8 @@ ENV OPUS_ANDROID_MK_DOWNLOAD_URL "https://trac.pjsip.org/repos/raw-attachment/ti
 
 ENV PATH /sources/android_ndk:$PATH
 
+ENV PATH /usr/local/sbin:$PATH
+
 ##############################
 # Download sources
 ##############################
@@ -123,8 +125,6 @@ RUN mkdir -p /output/openssl/ && \
     mkdir -p /output/openh264/ && \
     mkdir -p /output/pjsip && \
     mkdir -p /output/opus
-
-RUN pwd
 
 # Build opus
 ADD ./build_opus.sh /usr/local/sbin/
