@@ -40,7 +40,6 @@ ENV OPUS_ANDROID_MK_DOWNLOAD_URL "https://trac.pjsip.org/repos/raw-attachment/ti
 
 ENV PATH /sources/android_ndk:$PATH
 
-ENV PATH /usr/local/sbin:$PATH
 
 ##############################
 # Download sources
@@ -128,6 +127,7 @@ RUN mkdir -p /output/openssl/ && \
 
 # Build opus
 ADD ./build_opus.sh /usr/local/sbin/
+
 RUN IFS=" " && \
     for arch in $TARGET_ARCHS; \
     do \
