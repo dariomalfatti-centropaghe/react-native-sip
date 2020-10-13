@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "postinstall": "bash libs.sh",
+    "postinstall": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./libs.ps1",
     "lint": "eslint ./src",
     "generate-docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
   },
